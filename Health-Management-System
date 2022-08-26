@@ -1,0 +1,117 @@
+# 1)  Create a food log file for each client
+#2)   Create an exercise log file for each client.
+#3)   Ask the user whether they want to log or retrieve client data.
+#4)   Write a function that takes the user input of the client's name.
+#     After the client's name is entered, it will display a message as "What you want to log- Diet or Exercise".
+#5)           def getdate():
+#                      import datetime
+#                      return datetime.datetime.now()
+#6)   Write a function to retrieve exercise or food file records for any client.
+#        3 clients - Harry, Rohan and Hammad
+
+
+# Total 6 files
+# write a function that when executed takes as input client name
+# One more function to retrieve exercise or food for any client
+
+                                #HEALTH MANAGEMENT SYSTEM
+
+print("select the client name\n"
+      "1 for Harry\n"
+      "2 for Rohan\n"
+      "3 for Hammad")
+name = int(input())
+print("what do you want log or retrieve")
+print("press 1 for log\n"
+      "press 2 for retrieve")
+opt = int(input())
+print("select\n"
+      "1 for diet\n"
+      "2 for exercise")
+choice = int(input())
+
+if name == 1:
+        if opt == 1:
+            if choice == 1:
+                f = open("Harry_diet.txt" , "a")
+                print("What did you eat")
+                user = input()
+                def getdate():
+                    import datetime
+                    return datetime.datetime.now()
+                f.write(user + ":" + str([str(getdate())])  + "\n")
+                print("successfully writen")
+            elif choice == 2:
+                f = open("Harry_exercise.txt" , "a")
+                print("what workout did you do")
+                user = input()
+                def getdate():
+                    import datetime
+                    return datetime.datetime.now()
+                    f.write(user + ":" + str([str(getdate())]) + "\n")
+                    print("successfully writen")
+        elif opt == 2:
+            if choice == 1:
+                print("Harry_diet.txt")
+                f = open("Harry_diet.txt" , "r")
+                print(f.read())
+
+            elif choice == 2:
+                f = open("Harry_exercise.txt" , "r")
+                print(f.read())
+elif name == 2:
+    if opt == 1:
+        if choice == 1:
+            f = open("Rohan_diet.txt", "a")
+            print("What did you eat")
+            user = input()
+            def getdate():
+                import datetime
+                return datetime.datetime.now()
+            f.write(user + ":" + str([str(getdate())])  + "\n")
+            print("successfully writen")
+        elif choice == 2:
+            f = open("Rohan_exercise.txt", "a")
+            print("what workout did you do")
+            user = input()
+            def getdate():
+                import datetime
+                return datetime.datetime.now()
+            f.write(user + ":" + str([str(getdate())])  + "\n")
+            print("successfully writen")
+    elif opt == 2:
+        if choice == 1:
+            f = open("Rohan_diet.txt", "r")
+            print(f.read())
+
+        elif choice == 2:
+            f = open("Rohan_exercise.txt")
+            print(f.read())
+elif name == 3:
+    if opt == 1:
+        if choice == 1:
+            f = open("Hammad_diet.txt", "a")
+            print("What did you eat")
+            user = input()
+            def getdate():
+                import datetime
+                return datetime.datetime.now()
+            f.write(user + ":" + str([str(getdate())])  + "\n")
+            print("successfully writen")
+        elif choice == 2:
+            f = open("Hammad_exercise.txt", "a")
+            print("what workout did you do")
+            user = input()
+            def getdate():
+                import datetime
+                return datetime.datetime.now()
+            f.write(user + ":" + str([str(getdate())])  + "\n")
+            print("successfully writen")
+    elif opt == 2:
+        if choice == 1:
+            f = open("Hammad_diet.txt", "r")
+            print(f.read() , end="\n")
+        elif choice == 2:
+            f = open("Hammad_exercise.txt")
+            print(f.read())
+print("Thankyou!!")
